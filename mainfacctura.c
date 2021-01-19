@@ -41,6 +41,7 @@ typedef struct Ingresos{
  	Ingresos i;
  	Egresos eg;
  	BeneficioSocial bs;
+	 Datos d;
  	float totalRol;
  }Rol;
 void gotoxy(int x, int y)
@@ -54,7 +55,14 @@ void gotoxy(int x, int y)
 }
 int main() {
 	struct Rol r;
-	gotoxy(50,2);printf("ROL DE PAGO");
+	gotoxy(1,2);printf("NOMBRE DE LA EMPRESA:");
+	gotoxy(50,2);scanf("%[^\n]",&r.e.nombreEmpresa);
+	gotoxy(50,3);printf("ROL DE PAGO");
+	gotoxy(48,4);printf("mes:");
+	gotoxy(52,4);scanf("%s",&r.e.mes);
+	gotoxy(48,5);printf("A%cO:",165);
+	gotoxy(52,5);scanf("%s",&r.e.year);
+	gotoxy(0,6);printf("_______________________________________________________________________________________________");
 
 	return 0;
 }
