@@ -63,6 +63,30 @@ int main() {
 	gotoxy(48,5);printf("A%cO:",165);
 	gotoxy(52,5);scanf("%s",&r.e.year);
 	gotoxy(0,6);printf("_______________________________________________________________________________________________");
+gotoxy(1,7);printf("DATOS EMPLEADO");
+	gotoxy(5,8);printf("APELLIDOS Y NOMBRES:");
+	gotoxy(30,8);scanf("%s",&r.d.apellidoEmpleado);
+	gotoxy(5,9);printf("CEDULA:");
+	gotoxy(25,9);scanf("%s",&r.d.cedula);
+	gotoxy(65,8);printf("PROFESION:");
+	gotoxy(78,8);scanf("%s",&r.d.profesion);
+	gotoxy(65,9);printf("HORAS TRABAJADAS:");
+	gotoxy(90,9);scanf("%s",&r.d.horasLaboradas);
+	gotoxy(1,10);printf("____________________________________________________________________________");
+	gotoxy(10,11);printf("INGRESOS");
+	gotoxy(70,11);printf("EGRESOS");
+	gotoxy(1,12);printf("_____________________________________________________________________________");
+	gotoxy(5,13);printf("SUELDO:");
+	gotoxy(12,13);scanf("%f",&r.i.sueldo);
+	gotoxy(5,14);printf("DIAS LABORADOS:");
+	gotoxy(20,14);scanf("%i",&r.i.diasLaborados);
+	gotoxy(5,15);printf("HORAS EXTRAS:");
+	gotoxy(20,15);scanf("%f",&r.i.horasExtra);
+		r.i.totalIngresos =  r.i.sueldo + r.i.horasExtra;
+	gotoxy(5,16);printf("TOTAL INGRESOS:%.2f",r.i.totalIngresos);
+	 
 
+	return 0;
+}
 	return 0;
 }
