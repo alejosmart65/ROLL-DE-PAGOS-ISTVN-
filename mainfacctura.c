@@ -84,9 +84,5 @@ gotoxy(1,7);printf("DATOS EMPLEADO");
 	gotoxy(20,15);scanf("%f",&r.i.horasExtra);
 		r.i.totalIngresos =  r.i.sueldo + r.i.horasExtra;
 	gotoxy(5,16);printf("TOTAL INGRESOS:%.2f",r.i.totalIngresos);
-	 
-
-	return 0;
-}
 	return 0;
 }
