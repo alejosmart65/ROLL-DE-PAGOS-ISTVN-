@@ -84,5 +84,25 @@ gotoxy(1,7);printf("DATOS EMPLEADO");
 	gotoxy(20,15);scanf("%f",&r.i.horasExtra);
 		r.i.totalIngresos =  r.i.sueldo + r.i.horasExtra;
 	gotoxy(5,16);printf("TOTAL INGRESOS:%.2f",r.i.totalIngresos);
+	r.eg.totalEgresos = r.eg.anticipioSueldo +r.eg.prestamosIESS+r.eg.impuestoRenta+r.eg.IESS;
+	gotoxy(60,20);printf("TOTAL DE EGRESOS:%.2f",r.eg.totalEgresos);
+	gotoxy(1,21);printf("__________________________________");
+	r.bs.vacaciones = (((r.i.sueldo + extra)*12) /24)/12;
+	gotoxy(5,22);printf("VACACIONES:         %.2f",r.bs.vacaciones);
+	r.bs.decimoTercero = (r.i.sueldo + extra )/12;
+    gotoxy(5,23);printf("DECIMO TERCERO:%.2f",r.bs.decimoTercero);
+	r.bs.decimoCuarto = 400.00 / 12 ;
+	gotoxy(5,24);printf("DECIMO CUARTO: %.2f",r.bs.decimoCuarto);
+	r.bs.fondosReserva = ((r.i.sueldo +extra)*8.33)/100;
+	gotoxy(5,25);printf("FONDOS DE RESERVA: %.2f",r.bs.fondosReserva);
+	
+	r.bs.totalBeneficios = r.bs.vacaciones +r.bs.decimoTercero +r.bs.decimoCuarto + r.bs.fondosReserva;		
+	gotoxy(5,28);printf("TOTAL BENEFICIOS:%.2f",r.bs.totalBeneficios);
+	gotoxy(1,29);printf("___________________________________");
+	float totaling=0;
+	totaling = r.i.totalIngresos +r.bs.totalBeneficios;
+	gotoxy(40,35);printf("TOTAL A PAGAR SIN LOS EGRESOS: %.2f",totaling);
+	r.totalRol = totaling - r.eg.totalEgresos;
+	gotoxy(40,40);printf ("NETO A RECIBIR: %.2f",r.totalRol);
 	return 0;
 }
